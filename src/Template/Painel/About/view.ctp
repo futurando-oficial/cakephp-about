@@ -35,6 +35,6 @@
     </table>
     <div class="row">
         <h4><?= __('Text') ?></h4>
-        <?= $this->Text->autoParagraph(h($about->text)); ?>
+        <?= $about->text; ?>
     </div>
 </div>
