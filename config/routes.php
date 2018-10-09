@@ -14,6 +14,8 @@ Router::plugin(
 Router::prefix('painel', ['path' => '/painel'], function ($routes) {
     $routes->plugin('About', function ($routes) {
         $routes->connect('/', ['controller' => 'About', 'action' => 'index']);
+        $routes->connect('/add', ['controller' => 'About', 'action' => 'index']);
+        $routes->connect('/edit', ['controller' => 'About', 'action' => 'index']);
         $routes->fallbacks('DashedRoute');
     });
 });
