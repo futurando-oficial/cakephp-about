@@ -1,4 +1,5 @@
 <?php
+
 namespace About\Controller;
 
 use About\Controller\AppController;
@@ -9,16 +10,19 @@ use About\Controller\AppController;
  *
  * @method \About\Model\Entity\Api[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class ApiController extends AppController
-{
+class ApiController extends AppController {
+
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->Auth->allow(['index']);
+    }
 
     /**
      * Index method
      *
      * @return \Cake\Http\Response|void
      */
-    public function index()
-    {
+    public function index() {
         $this->loadmodel('About');
         $about = $this->About->find()->first();
 
