@@ -3,6 +3,7 @@
 namespace About\Controller;
 
 use About\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Api Controller
