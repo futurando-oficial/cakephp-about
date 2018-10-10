@@ -2,6 +2,7 @@
 namespace About\Controller\Painel;
 
 use About\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * About Controller
